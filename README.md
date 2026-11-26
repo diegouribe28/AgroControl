@@ -120,9 +120,9 @@ Los módulos principales se encuentran implementados. Se están realizando las v
 
 ## Autor
 
-- **Estudiante:** Diego Felipe González
+- **Estudiantes:** Diego Felipe González y Luis Ernesto Estevez Porras
 - **Programa:** Ingeniería de Sistemas
-- **Universidad:** Nombre de la universidad
+- **Universidad:** UTS
 - **Asignatura:** Programación Orientada a Objetos
 - **Año:** 2026
 
