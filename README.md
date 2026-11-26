@@ -1,2 +1,131 @@
-# AgroControl
-Sistema de Gestión y Control Porcino desarrollado en Java Swing y PostgreSQL, con arquitectura por capas, programación orientada a objetos y control de acceso mediante roles.
+# AgroControl – Sistema de Gestión y Control Porcino
+
+## Descripción del proyecto
+
+AgroControl es una aplicación de escritorio desarrollada para facilitar la gestión, administración y seguimiento de animales en una finca porcina, permitiendo centralizar la información y mejorar el control de los procesos productivos.
+
+El sistema está desarrollado utilizando Java Swing y PostgreSQL, aplicando los principios de programación orientada a objetos, arquitectura por capas e integridad referencial.
+
+## Objetivo general
+
+Desarrollar un sistema de información que permita gestionar y controlar los procesos de producción porcina mediante el registro, almacenamiento y consulta de información relacionada con los animales de una finca.
+
+## Funcionalidades principales
+
+- Inicio de sesión con autenticación de usuarios.
+- Gestión de animales mediante operaciones CRUD.
+- Activación y desactivación de animales.
+- Gestión de usuarios y roles.
+- Registro y seguimiento del peso.
+- Registro y control de alimentación.
+- Gestión de registros sanitarios.
+- Control de reproducción y fechas probables de parto.
+- Historial de cambios de etapas.
+- Almacenamiento persistente en PostgreSQL.
+
+## Tecnologías utilizadas
+
+| Tecnología | Aplicación |
+|---|---|
+| Java | Lenguaje de programación |
+| Java Swing | Interfaces gráficas |
+| Apache NetBeans 27 | Entorno de desarrollo |
+| PostgreSQL 18 | Motor de base de datos |
+| JDBC | Conexión con la base de datos |
+| Apache Ant | Compilación del proyecto |
+| PBKDF2 | Protección de contraseñas |
+| GitHub | Repositorio del proyecto |
+
+## Arquitectura del sistema
+
+El proyecto está organizado mediante una arquitectura por capas:
+
+- **Modelo:** clases que representan las entidades del sistema.
+- **DAO:** acceso y manipulación de la información en PostgreSQL.
+- **Servicio:** lógica de negocio y validaciones.
+- **Interfaz:** ventanas gráficas para la interacción con el usuario.
+- **Conexión:** configuración de la comunicación con PostgreSQL.
+
+## Roles del sistema
+
+### Administrador
+
+- Administración de usuarios.
+- Registro y actualización de animales.
+- Activación y desactivación de animales.
+- Eliminación de registros cuando la integridad referencial lo permite.
+- Acceso a todos los módulos.
+
+### Empleado
+
+- Registro y actualización de información operativa.
+- Consulta de animales.
+- Registro de peso, alimentación, reproducción y eventos sanitarios.
+- Consulta del historial de etapas.
+- Acceso restringido a funciones administrativas.
+
+## Base de datos
+
+El sistema utiliza una base de datos denominada `finca_porcina`, conformada por siete tablas:
+
+1. animal
+2. usuario
+3. registro_peso
+4. registro_alimentacion
+5. registro_sanitario
+6. reproduccion
+7. historial_etapa
+
+La base de datos utiliza claves primarias, claves foráneas, restricciones de validación e integridad referencial.
+
+## Requisitos de instalación
+
+- Java JDK compatible con el proyecto.
+- Apache NetBeans.
+- PostgreSQL.
+- pgAdmin 4 (opcional).
+- Controlador JDBC de PostgreSQL.
+
+## Instrucciones de instalación
+
+1. Descargar o clonar el repositorio.
+2. Crear la base de datos `finca_porcina` en PostgreSQL.
+3. Ejecutar el script SQL ubicado en la carpeta Base_de_datos.
+4. Abrir el proyecto en Apache NetBeans.
+5. Verificar que el controlador JDBC de PostgreSQL esté agregado a las librerías.
+6. Crear una copia del archivo `config.example.properties` con el nombre `config.properties`.
+7. Configurar el usuario y la contraseña de PostgreSQL en dicho archivo.
+8. Compilar y ejecutar el proyecto.
+
+## Seguridad
+
+El sistema implementa protección de contraseñas mediante PBKDF2, consultas parametrizadas mediante PreparedStatement y restricciones de acceso según el rol del usuario.
+
+Las credenciales de conexión a PostgreSQL se almacenan en un archivo de configuración local que no se incluye en el repositorio.
+
+## Documentación
+
+El repositorio incluirá:
+
+- Código fuente del proyecto.
+- Script de la base de datos.
+- Documento de características generales del proyecto.
+- Archivo de configuración de ejemplo.
+
+## Estado del proyecto
+
+Proyecto académico desarrollado como parte del proceso de formación en Ingeniería de Sistemas.
+
+Los módulos principales se encuentran implementados. Se están realizando las verificaciones finales de funcionamiento y persistencia de datos.
+
+## Autor
+
+- **Estudiante:** Diego Felipe González
+- **Programa:** Ingeniería de Sistemas
+- **Universidad:** Nombre de la universidad
+- **Asignatura:** Programación Orientada a Objetos
+- **Año:** 2026
+
+## Finalidad académica
+
+Este proyecto fue desarrollado con fines educativos, aplicando conocimientos de programación orientada a objetos, bases de datos, desarrollo de interfaces gráficas y gestión de sistemas de información.
